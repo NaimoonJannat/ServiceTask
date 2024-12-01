@@ -1,10 +1,108 @@
-/* components/Banner.module.scss */
 .banner {
-    background-color: #ffdd57;
-    color: #000;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+  
+    .content {
+      display: flex;
+      max-width: 1200px;
+      width: 100%;
+      gap: 2rem;
+  
+      .left {
+        flex: 1;
+  
+        .rating {
+          font-size: 1.2rem;
+          color: #f39c12;
+  
+          .reviews {
+            margin-left: 0.5rem;
+            color: #7f8c8d;
+          }
+        }
+  
+        h1 {
+          font-size: 2.5rem;
+          margin: 1rem 0;
+        }
+  
+        p {
+          font-size: 1.1rem;
+          color: #555;
+          line-height: 1.5;
+          margin-bottom: 1.5rem;
+        }
+  
+        .buttons {
+          display: flex;
+          gap: 1rem;
+  
+          button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 0.5rem;
+          }
+  
+          .browse {
+            background-color: #1abc9c;
+            color: #fff;
+          }
+  
+          .getStarted {
+            background-color: #fff;
+            color: #1abc9c;
+            border: 1px solid #1abc9c;
+          }
+        }
+      }
+  
+      .right {
+        flex: 1;
+        text-align: center;
+  
+        .imageContainer {
+          img {
+            width: 100%;
+            border-radius: 1rem;
+          }
+        }
+  
+        .stats {
+          margin-top: 1rem;
+          background-color: #fff;
+          padding: 1rem;
+          border-radius: 0.5rem;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+          h2 {
+            font-size: 2rem;
+            color: #1abc9c;
+          }
+  
+          p {
+            font-size: 1rem;
+            color: #555;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .banner .content {
+      flex-direction: column;
+      text-align: center;
+  
+      .left,
+      .right {
+        flex: none;
+        width: 100%;
+      }
+    }
   }
   
